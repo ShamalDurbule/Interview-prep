@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { HEADER_LOGO_URL } from "../utils/constant";
 
+
 const Header = () => {
+  const [isloggedIn, setIsloggedIn] = useState(false);
+  const handleLoggedIn = () => {
+    setIsloggedIn((prevLoggedIn) => (!prevLoggedIn))
+  }
   return (
     <div className="header">
       <div className="header-wrapper">
@@ -14,6 +19,7 @@ const Header = () => {
             <li>About us</li>
             <li>Contact us</li>
             <li>Cart</li>
+            <button onClick={handleLoggedIn}>{isloggedIn === false ? "Login" : "Logout"}</button>
           </ul>
         </div>
       </div>
