@@ -1,12 +1,12 @@
-.header{width: 100%;}
-.header-wrapper{width: 100%;background-color: #fff;display: flex;justify-content: space-between;align-items: center;border: 1px solid #000;}
+.header{width: 100%;position: fixed;top: 0;z-index: 9;}
+.header-wrapper{background-color: #fff;display: flex;justify-content:  space-evenly;align-items: center;border: 1px solid #000;}
 .logo-container{width: 20%;}
-.logo{width: 250px;}
+.logo{width: 180px;}
 .nav-items{width: 60%;}
-.nav-items ul {display: flex;justify-content: space-between;align-items: center}
+.nav-items ul {display: flex;justify-content: space-evenly;align-items: center}
 ul li{width: 25%;  list-style: none;}
-.body{padding: 50px;}
-.body-wrapper{display: grid;grid-template-columns: repeat(4,1fr);gap: 20px;gap: 20px;}
+.body{padding: 50px;margin-top: 100px;}
+.body-wrapper{display: grid;grid-template-columns: repeat(4,1fr);gap: 20px;align-items: stretch;}
 .search{display: flex;align-items: center;justify-content: space-evenly;margin-bottom: 50px;}
 .rate-btn:hover{cursor: pointer;}
 .card{max-width: 300px;white-space: wrap;overflow: hidden;text-overflow: ellipsis;border: 1px solid #000;background-color: rgb(231, 221, 221);padding:20px; box-sizing: border-box;}
@@ -17,7 +17,9 @@ h2{font-size: 24px;margin: 0;}
 h3{font-size:18px;margin: 0;}
 h4{font-size: 16px;margin: 0;}
 p{font-size: 14px;margin: 0;}
-
+a{text-decoration: none;color: #000;}
 .Shimmer-container{display: grid;grid-template-columns: repeat(4,1fr);gap: 20px;padding: 50px;}
 .Shimmer-container .shimmer-card{background-color: grey;height: 300px;}
-
+.cusions-menus{margin-top: 200px;padding:0px 50px;}
+.aboutus-page{margin-top: 200px;padding:0px 50px;}
+.UserInfo{border: 1px solid #000;margin-bottom: 50px;padding: 20px;}

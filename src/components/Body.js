@@ -2,6 +2,7 @@ import React from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./ShimmerUI";
 import { useState,useEffect } from "react";
+import {Link} from "react-router-dom";
 function Body() {
   const [listofRestaurent, setListofrestaurent] = useState([]);
   const [filteredCards , setFilteredCards] = useState([]);
@@ -44,7 +45,9 @@ function Body() {
       <div
        className="body-wrapper">
         {filteredCards.map((element) => ( //Map for iteration
-            <RestaurantCard resData={element} key={element.info.id}/> //Using index as a key is not a good practice
+        <Link key={element.info.id} to = {"/restaurants/" + element.info.id}>
+            <RestaurantCard resData={element} key={element.info.id}/>
+        </Link> //Using index as a key is not a good practice
         ))}
       </div>
     </div>
